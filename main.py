@@ -6,7 +6,7 @@ from generating_baby_names import main
 import time
 
 
-st.beta_set_page_config(
+st.set_page_config(
     page_title="Name generator",
     page_icon="🧊",
     layout="wide",
