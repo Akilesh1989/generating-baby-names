@@ -38,6 +38,7 @@ letters.insert(0, 'Any')
 st.header("Input")
 
 input_container_1, input_container_2, input_container_3 = st.beta_columns([4, 2, 2])
+
 with input_container_1:
     st.subheader("Enter names. ")
     names = st.text_area("Paste or type in names here. Please make sure you don't enclose them in single or double quotes.",
@@ -46,13 +47,13 @@ with input_container_1:
 
 with input_container_2:
     st.subheader("First letter")
-    first_letter = st.selectbox('Select First letter', letters)
+    first_letter = st.selectbox('Select the first letter of choice for the output names. If you dont have a choice, leave it "Any"', letters)
     validate_letter(first_letter)
     if first_letter == 'Any':
         first_letter = None
 
     st.subheader("Minimum name length")
-    minimum_name_length = st.selectbox('Select a minimum length. Lorem ipsum. Lorem ipsum. Lorem ipsum. ', [i for i in range(2, 21)])
+    minimum_name_length = st.selectbox('Select the minimum length of names you want to see in the output. The default is 2. ', [i for i in range(2, 21)])
     # minimum_name_length = st.slider('Select a minimum length.', min_value=2, max_value=20)
 
     st.subheader("Epochs")
@@ -63,7 +64,7 @@ with input_container_2:
 
 with input_container_3:
     st.subheader("Second letter")
-    second_letter = st.selectbox('Select Second letter', letters)
+    second_letter = st.selectbox('Select the second letter of choice for the output names. If you dont have a choice, leave it "Any"', letters)
     validate_letter(second_letter)
     if second_letter == 'Any':
         second_letter = None
