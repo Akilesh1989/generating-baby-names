@@ -1,1 +1,1 @@
-web: sh setup.sh && pip install -r requirements.txt && streamlit run streamlit.py
+web: sh setup.sh && streamlit run streamlit.py
